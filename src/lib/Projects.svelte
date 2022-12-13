@@ -7,7 +7,7 @@
 
 <section class="sectionSeparater" id="project">
   <div
-    class="fs-1 font-weight-bold font-color-primary d-flex justify-content-start mb-5"
+    class="sectionHeader fs-1 font-weight-bold font-color-primary d-flex justify-content-start mb-5"
   >
     Recent Notable Projects
   </div>

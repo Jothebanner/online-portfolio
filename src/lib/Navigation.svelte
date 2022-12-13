@@ -69,7 +69,7 @@
           <a
             class="fancy resume" target="_blank" rel="noopener noreferrer"
             href={Resume}
-            ><span> resume</span>
+            >resume
           </a>
         </div>
       </div>
@@ -79,33 +79,36 @@
 
 <style lang="scss">
   // yoink https://css-tricks.com/line-on-sides-headers/
-  .fancy {
-    line-height: 0.5;
-    text-align: center;
-  }
-  .fancy span {
-    display: inline-block;
-    position: relative;
-  }
-  .fancy span:before,
-  .fancy span:after {
-    content: "";
-    position: absolute;
-    height: 5px;
-    border-bottom: 1px solid var(--highlight-color);
-    top: 0;
-    width: clamp(5px, 1vw, 10px);
-  }
-  .fancy span:before {
-    right: 100%;
-    margin-right: 2px;
-  }
-  .fancy span:after {
-    left: 100%;
-    margin-left: 2px;
-  }
+  // .fancy {
+  //   line-height: 0.5;
+  //   text-align: center;
+  // }
+  // .fancy span {
+  //   display: inline-block;
+  //   position: relative;
+  // }
+  // .fancy span:before,
+  // .fancy span:after {
+  //   content: "";
+  //   position: absolute;
+  //   height: 5px;
+  //   border-bottom: 1px solid var(--highlight-color);
+  //   top: 0;
+  //   width: clamp(5px, 1vw, 10px);
+  // }
+  // .fancy span:before {
+  //   right: 100%;
+  //   margin-right: 2px;
+  // }
+  // .fancy span:after {
+  //   left: 100%;
+  //   margin-left: 2px;
+  // }
   .resume {
     padding: 0 calc(clamp(9px, 1vw, 12px) + 1px);
+    border-style: none none solid none !important;
+    border-color: var(--highlight-color);
+    border-bottom: var(--highlight-color);
   }
   // end-yoink https://css-tricks.com/line-on-sides-headers/
   :root {
