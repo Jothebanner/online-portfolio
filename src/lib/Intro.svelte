@@ -1,6 +1,13 @@
-
-  <section id="introSection">
-    <div class="text-start">
+<script>
+  import DownArrow from "../assets/downArrow.png";
+</script>
+  
+  
+<a href="/#project" class="bottom-1 col-12 position-absolute d-flex justify-content-center align-items-center filter-sc">
+  <img id="downArrow" class="image-fluid w-100 " src={DownArrow} alt="Down Arrow" />
+</a>
+  <section id="intro" class="mb-5">
+    <div class="text-start ml-5">
       <h1>
         <span id="hi">Hi</span><span id="comma">, </span><span id="me-area"
           >I'm <span id="me">Jacob</span></span
@@ -33,16 +40,28 @@
   #me {
     font-weight: 600;
   }
-  #introSection {
+  #intro {
     display: flex;
     -moz-box-pack: center;
     justify-content: center;
     -moz-box-align: center;
     flex-direction: column;
-    align-items: flex-start;
     min-height: 100vh;
     padding: 0px;
     }
+  #downArrow {
+    max-width: clamp(20px, 4vw, 30px) !important;
+    animation: 2s linear 1s infinite alternate fadeInAnimation;
+  }
+
+  @keyframes throbber {
+    0% {
+      color: white;
+    }
+    100% {
+      color: purple;
+    }
+  }
 
   @keyframes fadeInAnimation {
     0% {
