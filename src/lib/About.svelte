@@ -6,7 +6,7 @@
 
 <section class="sectionSeparater" id="about">
   <div
-    class="fs-1 font-weight-bold font-color-primary d-flex justify-content-start mb-5"
+    class="sectionHeader fs-1 font-weight-bold font-color-primary d-flex justify-content-start mb-5"
   >
     About Me
   </div>

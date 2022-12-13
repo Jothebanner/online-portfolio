@@ -96,6 +96,12 @@ section {
   padding-top: clamp(50px, 15vw, 120px);
   padding-bottom: clamp(50px, 15vw, 120px);
 }
+.sectionHeader {
+  margin-left: 15%;
+  border-style: none none solid none !important;
+  border-color: var(--highlight-color);
+  border-bottom: var(--highlight-color);
+}
 .width-max-content
 {
   width: max-content;
@@ -131,6 +137,9 @@ h1 {
 }
 h2 {
   color: var(--secondary-color);
+}
+h5 {
+  color: var(--secondary-color)
 }
 p {
   color: var(--secondary-color);
@@ -182,5 +191,15 @@ button:focus-visible {
   }
   button {
     background-color: var(--background-highlight-color);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sectionHeader {
+    margin-left: 0%;
+    border-style: none none solid none !important;
+    border-color: var(--highlight-color);
+    border-bottom: var(--highlight-color);
+    justify-content: center !important;
   }
 }
