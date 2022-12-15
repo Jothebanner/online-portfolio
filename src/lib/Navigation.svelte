@@ -41,7 +41,7 @@
         class="d-flex justify-content-start align-items-center col-3"
         href="#intro"
       >
-        <img class="image-fluid logo" src={PlanetLogo} alt="Planet Logo" />
+        <img class="image-fluid logo nav-padding" src={PlanetLogo} alt="Planet Logo" />
       </a>
       <div class="col-md-auto" />
       <div
@@ -49,7 +49,7 @@
         class:nc
       >
         <a
-          class="nav-toggle position-absolute d-flex d-sm-none"
+          class="nav-toggle nav-padding position-absolute d-flex d-sm-none"
           on:click={toggleHamburger}
         >
           <span class="bar" class:x />
@@ -135,13 +135,16 @@
     height: 80px;
   }
 
+  .nav-padding {
+    padding: 0.8em;
+  }
+
   //yoink https://stackoverflow.com/questions/70703929/hamburger-icon-css-animation-into-an-x
   .nav-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     //width: 40px;
-    padding: 0.8em;
     height: 3.55em;
     z-index: var(--z-layer-9);
   }
