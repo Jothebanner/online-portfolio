@@ -13,7 +13,7 @@
   <div class="row col-12 d-flex justify-content-center m-0">
     <div class="col-12 //col-md-6 order-2 //order-md-1 width-max-content d-flex justify-content-center">
       <!-- <img class="image-fluid" alt="It me" /> -->
-      <div class="d-flex row col-12 col-md-6 align-items-center justify-content-around">
+      <div class="d-flex row col-12 align-items-center justify-content-around">
         <div class="col-4 grid-padding">
           <img class="image-fluid m-1 logo" alt="C# Logo" src={csharpLogo} />
         </div>
