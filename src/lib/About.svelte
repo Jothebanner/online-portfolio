@@ -46,7 +46,7 @@
         and I am eager to work with a team again.
       </p>
       <p class="p-2 col-12 text-start">
-        Recently I've been working on a variety of explorative projects to
+        Recently, I've been working on a variety of explorative projects to
         discover in which focus my passion lies. So far, I know that I'm drawn
         towards quality-oriented, intuitive solutions in full-stack web/app
         development, game development, and the underlying systems that make them

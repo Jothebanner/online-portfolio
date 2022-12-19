@@ -13,8 +13,8 @@
           >I'm <span id="me">Jacob</span></span
         >
       </h1>
-      <h2 class="fadeup-enter">Wecome to my site! </h2>
-      <h5 class="col-12 col-md-6 fadeup-enter">I'm a software engineer with a focus on simplifying complex problems and creating interactive experiences.</h5>
+      <h2 class="fadeup-enter">Wecome to my portfolio! </h2>
+      <h5 class="col-12 col-md-6 fadeup-enter">I'm a software engineer who enjoys solving complex problems and creating interactive experiences.</h5>
     </div>
   </section>
 

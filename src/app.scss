@@ -134,6 +134,9 @@ h1 {
   font-size: clamp(40px, 8vw, 80px);
   line-height: 1.1;
 }
+.header-link {
+  font-size: calc(1.325rem + 0.7vw) !important;
+}
 h2 {
   color: var(--secondary-color);
 }
