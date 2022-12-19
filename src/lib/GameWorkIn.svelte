@@ -35,7 +35,7 @@
     mainObject.addChild(camera);
     mainObject.addChild(new CameraMovement(camera));
     mainObject.addChild(backgroundObject);
-    mainObject.addChild(new StarManager(camera, 5000, mainObject));
+    mainObject.addChild(new StarManager(camera, 2, mainObject)); // two stars per resolution..... unit? Pixel density?? Idk, it looks good :D
     sizeWindow();
   });
 </script>

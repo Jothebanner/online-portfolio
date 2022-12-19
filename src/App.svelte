@@ -7,6 +7,9 @@
   import Footer from "./lib/Footer.svelte";
   import About from "./lib/About.svelte";
   import { onMount } from "svelte";
+  import GameWorkIn from "./lib/GameWorkIn.svelte";
+  import Socials from "./lib/Socials.svelte";
+  import Socials2 from "./lib/Socials2.svelte";
 
   let toggle: boolean = true;
 
@@ -20,15 +23,19 @@
       distance: "20px",
     });
   });
+  
 </script>
 
 {#if toggle}
   <Navigation />
+  <GameWorkIn></GameWorkIn>
   <main class="main">
     <div class="mainContainer container">
       <Intro />
       <Projects />
       <About />
+      <Socials2></Socials2>
+      <!-- <Socials></Socials> -->
       <Footer />
     </div>
   </main>
@@ -62,6 +69,7 @@
   .logo.svelte:hover {
     filter: drop-shadow(0 0 2em #ff3e00aa);
   }
+
   @media screen and (max-width: 320px) {
     // bootstrap grid extra small
   }

@@ -3,12 +3,13 @@ import InputSingleton from "gameworkjs/InputSingleton.js";
 import SquareRenderer from "gameworkjs/SquareRenderer.js";
 import Vector3 from "gameworkjs/Vector3.js";
 
+// this is a mess because it seems I've added camera culling into something thats just supposed to generate stars lol
 class StarManager extends GameComponentBase {
     constructor(camera, starDensity, background) {
         super();
         this.camera = camera;
         this.activeStars = [];
-        this.starDensity = window.innerWidth/starDensity;
+        this.starDensity = window.innerWidth * starDensity;
         this.starPool = [];
         this.back = background;
         //this.xFovMod = 0;
