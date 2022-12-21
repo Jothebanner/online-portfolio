@@ -15,7 +15,7 @@ class CameraMovement extends GameComponentBase {
     }
 
     start() {
-        if (!((window.innerWidth <= 800) && (window.innerHeight <= 600)))
+        if (!(screen && screen.width < 480))
             window.addEventListener('mousemove', this.mouseMove);
     }
 
@@ -77,10 +77,14 @@ class CameraMovement extends GameComponentBase {
 
         this.xSpeed *= this.horSpeedMod;
         this.ySpeed *= this.vertSpeedMod;
-        if (!((window.innerWidth <= 800) && (window.innerHeight <= 600))) {
-            this.camera.position.x += this.xSpeed;
-            this.camera.position.y -= this.ySpeed;
+
+        if (screen && screen.width < 480) {
+            this.xSpeed = 0;
+            this.ySpeed = 0;
         }
+
+        this.camera.position.x += this.xSpeed;
+        this.camera.position.y -= this.ySpeed;
         this.camera.position.z += 0.05;
 
         //console.log(window.innerWidth);
