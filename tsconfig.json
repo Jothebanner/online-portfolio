@@ -12,6 +12,9 @@
      * of JS in `.svelte` files.
      */
     "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
     "checkJs": true,
     "isolatedModules": true
   },
