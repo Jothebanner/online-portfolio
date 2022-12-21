@@ -29,14 +29,28 @@
     window.addEventListener("resize", sizeWindow);
 
     let mainObject = new GameObject();
-    let backgroundObject = new GameObject();
 
     // give the camera something to output to
     mainObject.addChild(camera);
     mainObject.addChild(new CameraMovement(camera));
-    mainObject.addChild(backgroundObject);
-    mainObject.addChild(new StarManager(camera, 2, mainObject)); // two stars per resolution..... unit? Pixel density?? Idk, it looks good :D
+    mainObject.addChild(new StarManager(camera, 1, mainObject)); // one star per resolution..... unit? Pixel density?? Idk, it looks good :D
     sizeWindow();
+
+
+    // function pausePlay() {
+    //   console.log(window.scrollY + " " + window.innerHeight/2);
+    //   if (window.scrollY > window.innerHeight/2)
+    //   {
+    //     mainObject.setEnabled(false);
+    //     console.log("hitting");
+    //   }
+    //   else
+    //   {
+    //     mainObject.setEnabled(true);
+    //     console.log("hitting 2");
+    //   }
+    // }
+    // window.addEventListener("scroll", pausePlay);
   });
 </script>
     <canvas class="fadeOut position-absolute" bind:this={canvas} />

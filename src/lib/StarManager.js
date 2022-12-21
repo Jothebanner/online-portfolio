@@ -9,11 +9,16 @@ class StarManager extends GameComponentBase {
         super();
         this.camera = camera;
         this.activeStars = [];
-        this.starDensity = window.innerWidth * starDensity;
+        this.starDensity = (window.innerWidth + window.innerHeight) * starDensity;
+        this.starterStars = 1000;
+        if ((screen && screen.width < 480))
+        {
+            this.starDensity /= 2;
+            this.starterStars /= 2
+        }
         this.starPool = [];
         this.back = background;
         //this.xFovMod = 0;
-        this.starterStars = 300;
         
     }
 
@@ -22,7 +27,7 @@ class StarManager extends GameComponentBase {
             
             let starVector = this.generateStarVector(this.camera);
             let starSize = 50 * Math.random();
-            let star = new SquareRenderer("white", new Vector3(starVector.x/4, starVector.y/4, Math.pow(2, 5) * Math.random()), starSize, starSize);
+            let star = new SquareRenderer("white", new Vector3(starVector.x/4, starVector.y/4, Math.pow(3, 4) * Math.random()), starSize, starSize);
 
 
             this.back.addChild(star);
@@ -94,7 +99,7 @@ class StarManager extends GameComponentBase {
     }
 
     generateStarVector = (camera) => {
-        let z = Math.max(40, Math.pow(3, 4) * Math.random());
+        let z = Math.max(45, Math.pow(3, 4) * Math.random());
         z += camera.getPosition().z;
 
         let x = Math.random() * (camera.resolution.x / 2) * (z - camera.getPosition().z) * (Math.random() * 2 > 1 ? 1 : -1);
