@@ -2,6 +2,7 @@
   import jsLightLogo from "../assets/JS-light.svg";
   import csharpLogo from "../assets/csharpLogo.png";
   import reactLogo from "../assets/reactLogo.svg";
+  import databaseIcon from "../assets/database.svg";
 </script>
 
 <section class="sectionSeparater" id="about">
@@ -11,7 +12,9 @@
     About Me
   </div>
   <div class="row col-12 d-flex justify-content-center m-0">
-    <div class="col-12 //col-md-6 order-2 //order-md-1 width-max-content d-flex justify-content-center">
+    <div
+      class="col-12 order-2 width-max-content d-flex justify-content-center"
+    >
       <!-- <img class="image-fluid" alt="It me" /> -->
       <div class="d-flex row col-12 align-items-center justify-content-around">
         <div class="col-4 grid-padding">
@@ -30,25 +33,29 @@
             src="https://nodejs.org/static/images/logo.svg"
           />
         </div>
-        <div class="col-4">
-          <h2 class="align-content-center m-1">SQL</h2>
-        </div>
-        <div class="col-4">
-          <h2 class="align-content-center m-1">NoSQL</h2>
+        <div class="col-4 grid-padding">
+          <img class="image-fluid m-1 logo" alt="React Logo" src={databaseIcon} />
         </div>
       </div>
     </div>
-    <div class="row //col-md-6 col-12 order-1 //order-md-2 p-3 rounded d-flex justify-content-center m-0">
+    <div
+      class="row //col-md-6 col-12 order-1 //order-md-2 p-3 rounded d-flex justify-content-center m-0"
+    >
       <p class="p-2 col-12 text-start">
-        I am a self-motivated, ever-curious, result-driven software engineer. I
-        graduated from DavisTech with a 3.94 GPA and have worked towards
-        excellence since. I enjoyed working with my peers during my internships
-        and I am eager to work with a team again.
+        I am an enthusiast of caffeine, cooking and code! In my free time I
+        enjoy mountain biking, gaming with friends and researching a variety of
+        subjects.
+      </p>
+      <p class="p-2 col-12 text-start">
+        Since the dawn of my cognisence I've been intrigued by technology,
+        especially computers. I started learning about creating software in
+        middle-school, and in highschool I started at Davis Tech; graduating
+        with a 3.94 GPA.
       </p>
       <p class="p-2 col-12 text-start">
         Recently, I've been working on a variety of explorative projects to
-        discover in which focus my passion lies. So far, I know that I'm drawn
-        towards quality-oriented, intuitive solutions in full-stack web/app
+        discover where my passion lies. So far, I've learned that I'm drawn
+        towards quality-oriented, intuitive solutions particularly when it comes to full-stack web/app
         development, game development, and the underlying systems that make them
         possible.
       </p>
@@ -57,19 +64,13 @@
 </section>
 
 <style lang="scss">
-  .grid-padding
-  {
+  .grid-padding {
     padding: calc(var(--bs-gutter-x) * 0.5) calc(var(--bs-gutter-x) * 0.5);
   }
+  .logo{
+    height: clamp(60px, 5vw, 80px);
+  }
   @media screen and (max-width: 767px) {
-    
   }
-  @media screen and (min-width: 768px) {
-    .order-md-1 {
-      order: 1;
-    }
-    .order-md-2 {
-      order: 2;
-    }
-  }
+  
 </style>

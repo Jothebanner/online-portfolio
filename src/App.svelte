@@ -10,6 +10,9 @@
   import GameWorkIn from "./lib/GameWorkIn.svelte";
   import Socials from "./lib/Socials.svelte";
   import Socials2 from "./lib/Socials2.svelte";
+  import ContactMe from "./lib/ContactMe.svelte";
+  import ContactMeSection from "./lib/ContactMeSection.svelte";
+  import TypeWriterTest from "./lib/TypeWriterTest.svelte";
 
   let toggle: boolean = true;
 
@@ -32,10 +35,9 @@
   <main class="main">
     <div class="mainContainer container">
       <Intro />
-      <Projects />
       <About />
-      <Socials2></Socials2>
-      <!-- <Socials></Socials> -->
+      <Projects />
+      <ContactMeSection></ContactMeSection>
       <Footer />
     </div>
   </main>
@@ -57,17 +59,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-  }
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
   }
 
   @media screen and (max-width: 320px) {
