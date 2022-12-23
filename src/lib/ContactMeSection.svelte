@@ -1,12 +1,10 @@
 <script>
   import ContactMe from "./ContactMe.svelte";
-  import Socials from "./Socials.svelte";
   import Socials2 from "./Socials2.svelte";
-
 </script>
 
 
-<section class="sectionSeperator" id="contact">
+<section class="sectionSeparater" id="contact">
     <div class="sectionHeader fs-1 font-weight-bold font-color-primary d-flex justify-content-start mb-5">Contact</div>
 
     <ContactMe></ContactMe>

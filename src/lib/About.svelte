@@ -43,14 +43,12 @@
     >
       <p class="p-2 col-12 text-start">
         I am an enthusiast of caffeine, cooking and code! In my free time I
-        enjoy mountain biking, gaming with friends and researching a variety of
-        subjects.
+        enjoy mountain biking, gaming with friends and delving into interesting research topics.
       </p>
       <p class="p-2 col-12 text-start">
-        Since the dawn of my cognisence I've been intrigued by technology,
+        Since the dawn of my cognizence I've been intrigued by technology,
         especially computers. I started learning about creating software in
-        middle-school, and in highschool I started at Davis Tech; graduating
-        with a 3.94 GPA.
+        middle-school, and in highschool I started at Davis Tech; graduating early, near the top of my class.
       </p>
       <p class="p-2 col-12 text-start">
         Recently, I've been working on a variety of explorative projects to

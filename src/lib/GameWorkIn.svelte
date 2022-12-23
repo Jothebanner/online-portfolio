@@ -36,7 +36,6 @@
     mainObject.addChild(new StarManager(camera, 1, mainObject)); // one star per resolution..... unit? Pixel density?? Idk, it looks good :D
     sizeWindow();
 
-
     // function pausePlay() {
     //   console.log(window.scrollY + " " + window.innerHeight/2);
     //   if (window.scrollY > window.innerHeight/2)
@@ -51,9 +50,10 @@
     //   }
     // }
     // window.addEventListener("scroll", pausePlay);
+
   });
 </script>
-    <canvas class="fadeOut position-absolute" bind:this={canvas} />
+    <canvas class="fadeOut position-absolute w-100" bind:this={canvas} />
 
 <style lang="scss">
   .fadeOut {
