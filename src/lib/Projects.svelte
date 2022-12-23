@@ -4,7 +4,6 @@
   import csharpLogo from "../assets/csharpLogo.png";
   import gitLogo from "../assets/github-mark-white.svg";
   import jsLightLogo from "../assets/JS-light.svg";
-  import GameWorkIn from "./GameWorkIn.svelte";
 </script>
 
 <section class="sectionSeparater" id="project">
@@ -105,7 +104,7 @@
       <p
         class="g-description-right text rounded p-3 d-flex align-items-center z-index-layer-1"
       >
-        A basic game engine build with ECMAScript based on concepts from Unity,
+        A basic game engine built with ECMAScript based on concepts from Unity,
         Godot, and ECMAScript. I designed it with modularity in mind; the engine
         is a series compatible projects which can support the creation of
         web-based/interactive graphics.

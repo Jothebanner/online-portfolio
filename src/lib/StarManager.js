@@ -27,7 +27,7 @@ class StarManager extends GameComponentBase {
             
             let starVector = this.generateStarVector(this.camera);
             let starSize = 50 * Math.random();
-            let star = new SquareRenderer("white", new Vector3(starVector.x/4, starVector.y/4, Math.pow(3, 4) * Math.random()), starSize, starSize);
+            let star = new SquareRenderer("white", new Vector3(starVector.x/4, starVector.y/4, (Math.pow(3, 4) * Math.random()) + 10), starSize, starSize);
 
 
             this.back.addChild(star);

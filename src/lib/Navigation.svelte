@@ -74,13 +74,13 @@
           <span class="bar" class:x />
         </a>
         <div
-          class="col col-sm-3 text-center d-none d-sm-block m-sm-1 p-1 pt-sm-0 dropDownNav"
+          class="col col-sm-3 text-center d-none d-sm-block m-sm-1 p-1 pt-3 pt-sm-0 dropDownNav"
           class:d
         >
           <a class=" text-center" href="/#about">about </a>
         </div>
         <div
-          class="col col-sm-3 text-center d-none d-sm-block m-sm-1 p-1 pt-3 pt-sm-0 dropDownNav"
+          class="col col-sm-3 text-center d-none d-sm-block m-sm-1 p-1 pt-sm-0 dropDownNav"
           class:d
         >
           <a href="/#project">projects </a>
