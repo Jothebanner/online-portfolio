@@ -4,6 +4,9 @@
   import About from "./About.svelte";
   import App from "../App.svelte";
 
+  // export const wordWrap = true;
+  // export const rowLength = 40;
+
   export let code = `class TypeWriter {
     constructor(doc) {
     }
@@ -56,35 +59,68 @@
 
     let hljsElement;
     let hljsTest;
+    let typeWriterHeight = 0;
+    let scrollToggle = false;
 
+
+    export let textSize = "1vw";
+
+    let calculateSize = (entries) => 
+    {
+      let newTextSize = (entries[0].target.clientWidth / 1500) + .4;
+      textSize = newTextSize + "em";
+    }
+
+    // let stickToBottom = (entries) =>
+    // {
+    //   entries[0].target.scrollTo(0, entries[0].target.scrollHeight);
+    // }
 
   onMount(() => {
-    hljsTest = hljs.highlight(code, {language: 'typescript'}).value;
-    hljsElement.innerHTML = hljsTest;
+    hljsTest = code.split(/\n/g);
+    hljsElement.innerHTML = hljs.highlight(code, {language: 'typescript'}).value;
 
+    hljsElement.addEventListener("scroll", (event) => {
+      //yoink
+      if (Math.abs(hljsElement.scrollHeight - hljsElement.clientHeight - event.target.scrollTop) < 1)
+        scrollToggle = false;
+      else
+        scrollToggle = true;
+    });
+
+    new ResizeObserver(calculateSize).observe(hljsElement);
 
     let typewriter;
-    typewriter = new TypeWriter(hljsElement);
+    typewriter = new TypeWriter(hljsElement, hljsTest);
     setInterval(() => {
       typewriter.type();
-    }, 100);
+    }, 75);
   });
 
   let doc = null;
 
   class TypeWriter {
-    constructor(doc) {
+    constructor(doc, rows) {
       this.doc = doc;
       this.docContent = doc.innerHTML;
+      this.rows = rows;
       this.printedContent = "";
       this.sort = "";
       this.cursorPosition = 0;
+      this.rowNum = 0;
+      this.columnNum = 0;
     }
 
     printLetter() {
       this.printedContent += this.sort;
       this.doc.innerHTML = this.printedContent;
       this.cursorPosition++;
+      this.columnNum++;
+      if (this.doc.scrollHeight > typeWriterHeight && !scrollToggle)
+      {
+        this.doc.scrollTo(0, this.doc.scrollHeight);
+        typeWriterHeight = this.doc.scrollTop;
+      }
     }
 
     type() {
@@ -142,26 +178,42 @@
           this.printLetter();
         }
       }
+      
+      // // add to the end so we don't have to wait a tick to scroll
+      // if (this.columnNum >= this.rows[this.rowNum].length + 1)
+      // {
+      //   this.columnNum = 0;
+      //   this.rowNum++;
+      //   this.doc.scrollTo(0, this.doc.scrollHeight);
+      // }
     }
   }
 </script>
 
-<pre class="customHighlights" bind:this={hljsElement} id="typewriter"></pre>
+<pre style="--text-size: {textSize}" class="customHighlights" bind:this={hljsElement} id="typewriter"></pre>
 
 <style lang="scss">
-  .var-highlight {
-    color: #c0ad60;
+  :root {
+    --typewriter-text-size: var(--text-size);
   }
-  .string-highlight {
-    color: rgba(253, 149, 90, 0.8);
+  pre {
+    overflow-y: scroll;
+    scrollbar-color: dark;
+    height: 100%;
+    width: 100%;
+    //yoink
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
   }
-
   #typewriter {
-    font-size: 2em;
+    font-size: var(--text-size);
     margin: 0;
     font-family: "Courier New";
     text-align: left;
-    width: 80vw;
+    padding-bottom: calc(var(--text-size) * 3);
 
     &:after {
       content: "|";
