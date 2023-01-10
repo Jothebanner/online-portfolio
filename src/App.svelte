@@ -12,7 +12,6 @@
   import Socials2 from "./lib/Socials2.svelte";
   import ContactMe from "./lib/ContactMe.svelte";
   import ContactMeSection from "./lib/ContactMeSection.svelte";
-  import TypeWriterTest from "./lib/TypeWriterTest.svelte";
 
   let toggle: boolean = true;
 
