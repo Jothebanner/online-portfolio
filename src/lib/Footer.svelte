@@ -9,7 +9,7 @@
               rel="noopener noreferrer"
               class=""
               href="https://github.com/Jothebanner/online-portfolio"
-              >Designed and Build By Jacob Hawks</a
+              >Designed and built by Jacob Hawks</a
             >
           </div>
           <p class="">

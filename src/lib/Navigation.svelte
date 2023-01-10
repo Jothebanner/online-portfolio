@@ -1,17 +1,17 @@
-<script lang="ts">
+<script lang="js">
   import { onMount } from "svelte";
   import PlanetLogo from "../assets/planet-saturn.svg";
-  import Resume from "../assets/JacobHawks_SoftwareEngineering.pdf";
+  import Resume from "../assets/JacobHawks-SoftwareEngineer.pdf";
   import Socials from "./Socials.svelte";
 
-  let oldScroll: number = 0;
+  let oldScroll = 0;
   let trigger = false;
 
   onMount(() => {
     oldScroll = window.scrollY;
     navRetract = false;
   })
-  let blurFactor: string = "1px";
+  let blurFactor = "1px";
   window.onscroll = () => {
     if (window.scrollY > oldScroll && trigger) {
       blurFactor = "6px";
@@ -65,6 +65,8 @@
         class="d-flex col-4 col-sm-6 mw-400 col-xl-4 justify-content-end flex-wrap flex-sm-nowrap position-relative transition-lin-100" class:navRetract
         class:nc
       >
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <a
           class="nav-toggle nav-padding position-absolute d-flex d-sm-none"
           on:click={toggleHamburger}
@@ -83,7 +85,7 @@
           class="col col-sm-3 text-center d-none d-sm-block m-sm-1 p-1 pt-sm-0 dropDownNav"
           class:d
         >
-          <a href="/#project">projects </a>
+          <a href="/#projects">projects </a>
         </div>
         <div
           class="col col-sm-3 text-center d-none d-sm-block m-sm-1 p-1 pt-sm-0 dropDownNav"
@@ -99,7 +101,7 @@
             class="fancy resume"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://docs.google.com/document/d/1hBmK73cLfrJM6m2vvPu_xkwwECWFThW-D9xfbZE3hc0/edit?usp=sharing"
+            href={Resume}
             >resume
           </a>
         </div>
