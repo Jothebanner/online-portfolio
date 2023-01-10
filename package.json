@@ -26,6 +26,7 @@
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
     "gameworkjs": "^1.0.1",
+    "highlight.js": "^11.7.0",
     "scrollreveal": "^4.0.9"
   }
 }
