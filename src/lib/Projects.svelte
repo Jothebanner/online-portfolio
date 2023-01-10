@@ -6,7 +6,7 @@
   import jsLightLogo from "../assets/JS-light.svg";
 </script>
 
-<section class="sectionSeparater" id="project">
+<section class="sectionSeparater" id="projects">
   <div
     class="sectionHeader fs-1 font-weight-bold font-color-primary d-flex justify-content-start mb-5"
   >
